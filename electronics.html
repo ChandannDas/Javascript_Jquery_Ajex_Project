@@ -1,0 +1,73 @@
+<html>
+  <title>login</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css"> 
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="../jquery-ui-1.13.2/jquery-ui-1.13.2/jquery-ui.js"></script>
+  <script src="../javascript_module/electronics.js"></script>
+  <head>
+  </head>
+  <body class="container-fluid">
+    <header class=" text-dark text-center p-2" style="background-color: yellow;">
+      <span class="bi bi-cart4"></span><h2>flipcart Shopping</h2>
+    </header>
+    <div class="row mt-3">
+      <div class="col-2">
+        <h4>Fashion</h4>
+      </div>
+      <div class="col-8">
+        <div id="homemenu" class="d-flex flex-wrap overflow-auto" style="height: 800px;">
+
+          </div>
+        </div>
+      
+      <div class="col-2">
+        <button class="btn btn-danger" onclick="fashionitems()" data-bs-target="#cart" data-bs-toggle="modal" id="datacancel">
+          [<span id="itemnumber"></span>]
+          <span class="bi bi-cart4"></span>your cart items
+        </button>
+      </div>
+    </div>
+    <div class="modal" id="cart">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class=" modal-header">
+            <h3>your items</h3>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>price</th>
+                        <th>preview</th>
+                    </tr>
+                </thead>
+                <tbody  id="delete">
+                    
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th>Total amount</th>
+                    <th id="priceamount"></th>
+                  </tr>
+                </tfoot>
+              </table>
+          </div>
+          <div class="modal-footer">
+         <button data-bs-dismiss="modal" class="btn btn-primary w-25">
+           ok
+         </button>
+         <button class="btn btn-danger w-25" onclick="removeolddata()" data-bs-dismiss="modal">
+          Cancel
+         </button>
+          </div>
+        </div>
+    </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <title>registration form</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  
+    <head>
+    <script>
+        function userkey(){
+          
+         var Username=document.getElementById("username").value;
+          var useridentify=document.getElementById("useridentify"); 
+          var usernameregex = /^[a-z]{3,10}$/;
+
+if (Username.match(usernameregex)) {
+    useridentify.innerHTML = "username correct";
+    useridentify.className = "text-success";
+} else {
+    useridentify.innerHTML = "username wrong";                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    useridentify.className = "text-danger";
+}
+};
+      function passwordkey(){
+        var password=document.getElementById("password").value;
+        var passwordidentify=document.getElementById("passwordidentify");
+        var passwordregexp=/^(?=.*[A-Za-z0-9])[A-Z]{1}[a-z]{1,16}[0-9]{1,4}[@]{1}$/;
+        if(password.match(passwordregexp)){
+          passwordidentify.innerHTML="validate password";
+          passwordidentify.className="text-success";
+        }else{
+          passwordidentify.innerHTML="invalid password";
+          passwordidentify.className="text-danger";
+        }
+      };
+  
+      function phonenumber(){
+        var PhoneNumber=document.getElementById("PhoneNumber").value;
+        var phonenumberidentify=document.getElementById("phonenumberidentify");
+
+        var regexp=/^[+91]{3}[0-9]{6,10}$/;
+        if(PhoneNumber.match(regexp)){
+          phonenumberidentify.innerHTML="valid number";
+          phonenumberidentify.className="text-success";
+
+        }else{
+          phonenumberidentify.innerHTML="invalid number";
+          phonenumberidentify.className="text-danger";
+        }
+      }
+        function emails(){
+          var emails=document.getElementById("emailtextbox").value;
+          var emailidentify=document.getElementById("emailidenetify");
+          
+          var regexp=/^(?=.*[a-z0-9])[a-z]{1,16}[0-9]{1,4}[@]{1}[gmail]{1,5}\.[com]{1,3}$/;
+
+          if(emails.match(regexp)){
+            emailidentify.innerHTML="valid mail";
+            emailidentify.className="text-success";
+          }else{
+            emailidentify.innerHTML="Invalid mail";
+            emailidentify.className="text-danger";
+          }
+        }
+    </script>
+    </head>
+  <body class="container-fluid">
+    <div class="d-flex flex-wrap">
+    <form>
+        <div>
+          <h2>Login Form</h2>
+        </div>
+        <div>
+            <dl>
+              <div>
+                <dt>UserName</dt>
+              <div>
+                <dd class="input-group">
+                  <span class="bi bi-person text-white bg-black input-group-text"></span>
+                  <input type="text" name="username" id="username" class="form-control" onkeyup="userkey()">
+                  <span class="bi bi-check-circle text-white bg-black input-group-text"></span>
+                </dd>
+              </div>
+               <p id="useridentify"></p>
+              </div>
+              <div>
+                <dt>Password</dt>
+              <div>
+                <dd class="input-group">
+                  <span class="bi bi-key-fill text-white bg-black input-group-text"></span>
+                  <input type="password" name="password" id="password" class="form-control" onkeyup="passwordkey()">
+                  <span class="bi bi-check-circle text-white bg-black input-group-text"></span>
+                </dd>
+              </div>
+              <p id="passwordidentify"></p>
+              </div>
+             <div>
+              <dt>PhoneNumber</dt>
+              <div>
+                <dd class="input-group">
+                  <span class="bi bi-telephone text-white bg-black input-group-text"></span>
+                  <input type="text" name="PhoneNumber" id="PhoneNumber"  class="form-control" onkeyup="phonenumber()">
+                  <span class="bi bi-check-circle text-white bg-black input-group-text"></span>
+                </dd>
+              </div>
+              <p id="phonenumberidentify"></p>
+             </div>
+              <div>
+                <dt>email</dt>
+              <div>
+                <dd class="input-group">
+                  <span class="bi bi-envelope text-white bg-black input-group-text"></span>
+                  <input type="email" name="email" id="emailtextbox" class="form-control" onkeyup="emails()">
+                  <span class="bi bi-check-circle text-white bg-black input-group-text"></span>
+                </dd>
+              </div>
+              <p id="emailidenetify"></p>
+              </div>
+              <div>
+                <dt>Date-Of-Barth</dt>
+               <div>
+                <dd class="input-group">
+                  <span class="bi bi-calendar-day text-white bg-black input-group-text"></span>
+                  <input type="datetime-local" name=" dateofbairth" id="dateofbairth" class="form-control">
+                  <span class="bi bi-check-circle text-white bg-black input-group-text"></span>
+                </dd>
+               </div>
+                <p id="date-of-bairth"></p>
+              </div>
+            </dl>
+        </div>
+        <div class="footer"> 
+           <span>
+            <button class="btn btn-primery">Login</button>
+            <button class="btn btn-danger">Cancel</button>
+           </span>
+           </div>
+          </form>
+        </div>
+  </body>
+</html>

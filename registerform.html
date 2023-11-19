@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <title>registration form</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  
+    <head>
+    <script>
+        function userkey(){
+          
+         var Username=document.getElementById("username").value;
+          var useridentify=document.getElementById("useridentify"); 
+          var usernameregex = /^[a-z]{3,10}$/;
+
+if (Username.match(usernameregex)) {
+    useridentify.innerHTML = "username correct";
+    useridentify.className = "text-success";
+} else {
+    useridentify.innerHTML = "username wrong";                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    useridentify.className = "text-danger";
+}
+};
+      function passwordkey(){
+        var password=document.getElementById("password").value;
+        var passwordidentify=document.getElementById("passwordidentify");
+        var passwordregexp=/^(?=.*[A-Za-z0-9])[A-Z]{1}[a-z]{1,16}[0-9]{1,4}[@]{1}$/;
+        if(password.match(passwordregexp)){
+          passwordidentify.innerHTML="validate password";
+          passwordidentify.className="text-success";
+        }else{
+          passwordidentify.innerHTML="invalid password";
+          passwordidentify.className="text-danger";
+        }
+      };
+  
+      function phonenumber(){
+        var PhoneNumber=document.getElementById("PhoneNumber").value;
+        var phonenumberidentify=document.getElementById("phonenumberidentify");
+
+        var regexp=/^[+91]{3}[0-9]{6,10}$/;
+        if(PhoneNumber.match(regexp)){
+          phonenumberidentify.innerHTML="valid number";
+          phonenumberidentify.className="text-success";
+
+        }else{
+          phonenumberidentify.innerHTML="invalid number";
+          phonenumberidentify.className="text-danger";
+        }
+      }
+        function emails(){
+          var emails=document.getElementById("emailtextbox").value;
+          var emailidentify=document.getElementById("emailidenetify");
+          
+          var regexp=/^(?=.*[a-z0-9])[a-z]{1,16}[0-9]{1,4}[@]{1}[gmail]{1,5}\.[com]{1,3}$/;
+
+          if(emails.match(regexp)){
+            emailidentify.innerHTML="valid mail";
+            emailidentify.className="text-success";
+          }else{
+            emailidentify.innerHTML="Invalid mail";
+            emailidentify.className="text-danger";
+          }
+        }
+    </script>
+    </head>
+  <body class="container-fluid">
+    <div class="d-flex flex-wrap">
+    <form>
+        <div class="modal fade" id="registermodal">
+            <div class="modal-dialog">
+             <div class="modal-content">
+                  <div class="modal-header">
+                           <h2>User Registration form</h2>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                  </div> 
+                  <div class="modal-body">
+                        <dl>
+                           <dt>Username</dt>
+                           <dd>
+                               <input type="text">
+                           </dd>
+                           <dt>password</dt>
+                           <dd>
+                               <input type="password">
+                           </dd>
+                           <dt>password</dt>
+                           <dd>
+                               <input type="email">
+                           </dd>
+                        </dl>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-primary">Register</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal">cancel</button>
+                  </div>
+             </div>
+            </div>
+        </div>
+          </form>
+        </div>
+  </body>
+</html>

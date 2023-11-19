@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<title>flipkart</title>
+<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="../jquery-ui-1.13.2/jquery-ui-1.13.2/jquery-ui.js"></script>
+<script src="../jquery-ui-1.13.2/jquery-ui-1.13.2/jquery-ui.css"></script>
+<link rel="stylesheet" href="../Javascript_Final_Project/fullproject.css">
+
+<head>
+   <script>
+    function fashion(){
+        document.getElementById("bodyresponsive").style.display="none";
+    }
+    function search() {
+    var searchValue = document.getElementById("searchvalue").value;
+    // Check if the search value is related to fashion.html
+    var search=document.getElementById("")
+    if (searchValue == "fashion" ) {
+        window.location.href = 'fashion.html';
+}else if(searchValue == "electronics" ){
+    window.location.href = 'electronics.html';
+}else if(searchValue == "jewellery"){
+  window.location.href='jewellery.html';
+}else if(searchValue == "mansclothing"){
+    window.location.href='mansclothing.html';
+}
+
+}  
+
+function username(){
+    var pas=document.getElementById("user").value;
+    var us=document.getElementById("use");
+    var reg=/^[A-Z]{1}[a-z]{1,30}$/
+    if(pas.match(reg)){
+        us.innerHTML="validate password";
+        us.className = "text-success";
+    }else{
+        us.innerHTML="invalid password";
+        us.className="text-danger";
+}
+}
+function password(){
+    var pw=document.getElementById("pass").value;
+    var pww=document.getElementById("pw");
+    var exp=/^(?=.*[A-Za-z0-9])[A-Z]{1}[a-z]{1,16}[@]{1}[0-9]{1,4}$/;
+    if(pw.match(exp)){
+        pww.innerHTML="validate password";
+        pww.className="text-success";
+      }else{
+        pww.innerHTML="invalid password";
+        pww.className="text-danger";
+      }
+}
+function conpassword(){
+    var pw=document.getElementById("pass").value;
+    var cpass=document.getElementById("cupassword").value;
+    var cpww=document.getElementById("cpw");
+    var regexp=/^(?=.*[A-Za-z0-9])[A-Z]{1}[a-z]{1,16}[@]{1}[@]{1}[0-9]{1,4}$/;
+    if(pw.match(regexp) == cpass.match(regexp)){
+        cpww.innerHTML="validate password";
+        cpww.className="text-success";
+      }else{
+        cpww.innerHTML="current password and confirm password didn't match";
+        cpww.className="text-danger";
+      } 
+    }
+   </script> 
+</head>
+
+<body class="container-fluid	" onload="bodyload()">
+    <div class="fullbody">
+        <header  id="headerresponsive" class="top" >
+           <div  class="headerbutton">
+                <div style="padding: 2px;">
+                    <h3 class="text-primary flipcart">Flipcart</h3>
+                </div>
+                
+               
+                <div  id="searchbutton"  >
+                    <input type="text" placeholder="Search product name" name="searchbox"
+                         id="searchvalue" >
+                        <span>
+                            <button onclick="search()" id="search">search</button>
+                        </span>
+                </div>
+                <!-- <button class="bt btn-primary dropdown-toggle menu"  onclick="menu()">menu</button> -->
+                <div style="padding: 2px;" id="loginondiv">
+                    <div class="login-rs">
+                    
+                        <button class="" id="login" data-bs-toggle="modal" data-bs-target="#loginmodal">Login</button> 
+                        <span><button class="" data-bs-toggle="modal" data-bs-target="#registermodal" > register</button></span>
+                    </div>
+                    <form>
+                        <div class="modal fade" id="registermodal">
+                            <div class="modal-dialog">
+                             <div class="modal-content">
+                                  <div class="modal-header">
+                                           <h2>User Registration form</h2>
+                                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                                  </div> 
+                                  <div class="modal-body">
+                                        <dl>
+                                           <dt>Username</dt>
+                                           <dd>
+                                               <input type="text" onkeyup="username()" id="user">
+                                               <p id="use"></p>
+                                           </dd>
+                                           <dt> current password</dt>
+                                           <dd>
+                                               <input type="password" onkeyup="password()" id="pass">
+                                               <p id="pw"></p>
+                                           </dd>
+                                           <dt> condirm password</dt>
+                                           <dd>
+                                               <input type="email" onkeyup="conpassword()" id="cupassword">
+                                               <p id="cpw"></p>
+                                           </dd>
+                                        </dl>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button class="btn btn-primary">Register</button>
+                                    <button class="btn btn-danger" data-bs-dismiss="modal">cancel</button>
+                                  </div>
+                             </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="modal fade" id="loginmodal">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                         <div class="modal-header">
+                            <h2 class="modal-title">login form</h2>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                         </div>
+                         <div class="modal-body">
+                            <dl>
+                                <dt>username</dt>
+                                <dd><input type="text"></dd>
+                            <dt>password</dt>
+                            <dd><input type="password"></dd>
+                          </dl>
+                         </div>
+                         <div class="modal-footer">
+                            <button>login</button>
+                            <button class="btn btn-danger" data-bs-dismiss="modal">cancel</button>
+                         </div>
+                         <div></div>
+                          </div>
+                        </div>
+            
+                     </div>
+                </div>
+            </div>
+          
+        </header>
+        <div id="bodyresponsive">
+            <div id="bodya">
+                <div   id="firstrow">
+                    <div   id="all-item">
+                        <div class=" item">
+                            <p  class="paraitem"><a  id="fashion" class="itemname"
+                              onclick="fashion()" href="fashion.html">Womens Clothing</a></p>
+                            <img src="../Javascript_Final_Project/assets/fashion.PNG" width: 122px; id="imgresponsive">
+                        </div>
+
+                        <div class=" item">
+                            <p  class="paraitem"><a  id="electronics" class="itemname"
+                               onclick="ele()"  href="electronics.html"   >Electronics</a></p>
+                            <img src="../Javascript_Final_Project/assets/Electronics.PNG"  id="imgresponsive">
+                        </div>
+                        <div class=" item">
+                            <p  class="paraitem"><a  id="jewellery" class="itemname"
+                                    onclick="jewelle()" href="jewellery.html" >jewellery</a></p>
+                            <img src="../Javascript_Final_Project/assets/beauty.PNG" id="imgresponsive">
+                        </div>
+                        <div class=" item">
+                            <p  class="paraitem"><a  id="mans" class="itemname"
+                                    onclick="furniture()" href="mens_clothing.html">mainsclothing</a></p>
+                            <img src="../Javascript_Final_Project/assets/furniture.PNG"  id="imgresponsive">
+                        </div>
+                        <div class=" item">
+                            <p  class="paraitem"><a  id="gift" class="itemname"
+                                    onclick="gift()" href="jewellery.html"  >gift</a></p>
+                            <img src="../Javascript_Final_Project/assets/giftitem.PNG"  id="imgresponsive">
+                        </div>
+                        <div class= "item">
+                            <p  class="paraitem"><a  id="grocery" class="itemname"
+                                    onclick="grocery()" href="mens_clothing.html" >grocery</a></p>
+                            <img src="../Javascript_Final_Project/assets/grocery.PNG"  id="imgresponsive">
+                        </div>
+                        <div class=" item">
+                            <p  class="paraitem"><a  id="hairitems" class="itemname"
+                                    onclick="hair-1()" href="fashion.html" >hairitems</a></p>
+                            <img src="../Javascript_Final_Project/assets/hariitems.PNG"  id="imgresponsive">
+                        </div>
+                        <div class=" item">
+                            <p  class="paraitem"><a  id="hair-2" class="itemname"
+                             onclick="hair-2()" href="electronics.html" >hairitems</a></p>
+                            <img src="../Javascript_Final_Project/assets/hariitems.PNG"  id="imgresponsive">
+                        </div>
+                        <div class=" item">
+                            <p  class="paraitem"><a  id="hair-3" class="itemname"
+                                    onclick="hair-3()" href="fashion.html" style="text-decoration: none;">haireitems</a></p>
+                            <img src="../Javascript_Final_Project/assets/hariitems.PNG"  id="imgresponsive">
+                        </div>
+                        <div class=" item">
+                            <p  class="paraitem"><a  id="giftitems" class="itemname"
+                                    onclick="gift-1()" href="jewellery.html" >giftitem</a></p>
+                            <img src="../Javascript_Final_Project/assets/giftitem.PNG"  id="imgresponsive">
+                        </div>
+                        <div class=" item">
+                            <p  class="paraitem"><a  id="furniture" class="itemname"
+                                    onclick="furn-1()" href="fashion.html" >furniture</a></p>
+                            <img src="../Javascript_Final_Project/assets/furniture.PNG"  id="imgresponsive">
+                        </div>
+                        <div class=" item">
+                            <p  class="paraitem"><a  id="gift-2" class="itemname"
+                                    onclick="gift-2()" href="jewellery.html" >giftitem</a></p>
+                            <img src="../Javascript_Final_Project/assets/giftitem.PNG"  id="imgresponsive">
+                        </div>
+                        <!-- <div class="m-2">
+                            <p class="text-bg-dark text-center"><a class="text-white bg-dark" id="fashion-2"
+                                    onclick="fash-2()" href="fashion.html" style="text-decoration: none;">fashion</a></p>
+                            <img src="../Javascript_Final_Project/assets/fashion.PNG" height="100px" width="100px" id="imgresponsive">
+                        </div> -->
+                        
+                    </div>
+                </div>
+                <div  id="carouseheigthres">
+
+                    <div class="carousel slide carousel-dark mt-1" data-bs-ride="carousel"
+                        id="banner" class="caroubanner">
+                        <div class="carousel-inner ">
+                            <div class="carousel-item active"  id="caitem">
+                                <img src="../Javascript_Final_Project/assets/phone.PNG"  id="sarouselimgres">
+                            </div>
+                            <div class="carousel-item"  id="caitem">
+                                <img src="../Javascript_Final_Project/assets/giftitem.PNG"  id="sarouselimgres">
+                            </div>
+                            <div class="carousel-item"  id="caitem">
+                                <img src="../Javascript_Final_Project/assets/fashion.PNG" id="sarouselimgres">
+                            </div>
+                            <div class="carousel-item" id="caitem">
+                                <img src="../Javascript_Final_Project/assets/hariitems.PNG" id="sarouselimgres">
+                            </div>
+                            <div class="carousel-item" id="caitem">
+                                <img src="../Javascript_Final_Project/assets/kitchen.PNG"  id="sarouselimgres">
+                            </div>
+                            <div class="carousel-item" id="caitem">
+                                <img src="../Javascript_Final_Project/assets/grocery.PNG"  id="sarouselimgres">
+                            </div>
+                            <div class="carousel-item" id="caitem">
+                                <img src="../Javascript_Final_Project/assets/furniture.PNG"  id="sarouselimgres">
+                            </div>
+                            <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banner" id="sarouselimgres">
+                                <span class="carousel-control-prev-icon"> </span>
+                            </button>
+                            <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#banner" id="sarouselimgres">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div  class="smallimg">
+               <div  id="smallres">
+                <img src="../bootstrapicon/assets/Boxmeal - Copy.PNG"  class="smallimgcl" >
+                <img src="../bootstrapicon/assets/chickenrole.PNG" class="smallimgcl"  >
+                <img src="../bootstrapicon/assets/snacks.PNG"  class="smallimgcl"  >
+                <img src="../bootstrapicon/assets/snacks.PNG"  class="smallimgcl" >
+                <img src="../bootstrapicon/assets/snacks.PNG"  class="smallimgcl" >
+                <img src="../bootstrapicon/assets/chickenrole.PNG"  class="smallimgcl"  >
+                <img src="../bootstrapicon/assets/snacks.PNG"  class="smallimgcl"  >
+                <img src="../bootstrapicon/assets/Boxmeal.PNG"   class="smallimgcl" >
+                <img src="../bootstrapicon/assets/chickenrole.PNG"  class="smallimgcl"  >
+                <img src="../bootstrapicon/assets/snacks.PNG"  class="smallimgcl" >
+                <img src="../bootstrapicon/assets/snacks.PNG"  class="smallimgcl"  >
+                <img src="../bootstrapicon/assets/snacks.PNG"  class="smallimgcl" >
+                <img src="../bootstrapicon/assets/Boxmeal.PNG" class="smallimgcl" >
+               </div>
+            </div>
+        </div>
+        <footer class="footcolor">
+
+            <div  class="footdes" >
+                <div   class="footer-menu"><span class="bi bi-house  " ></span>Home</div>
+                <div  class="footer-menu"><span class="bi bi-android "></span>menu</div>
+                <div  class="footer-menu"><span class="bi bi-phone-fill"></span>contactus</div>
+                <div  class="footer-menu"><span class="bi bi-share"></span>share</div>
+                <div  class="footer-menu"><span class="bi bi-messenger"></span>feedback</div>
+                <div  class="footer-menu"><span class="bi bi-people-fill"></span>profile</div>
+            </div>
+        </footer>
+      </div>
+    
+  
+   <script>
+   
+
+   </script>
+   
+</body>
+
+</html>

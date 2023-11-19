@@ -1,0 +1,391 @@
+.container-fluid{
+    width: 100%;
+    --bs-gutter-x:0rem;
+}
+    .fullbody{
+        background-color: rgb(206, 195, 195);
+    }
+    .top {
+        width: 100%; 
+        height: 50px; 
+        background-color: yellow;
+    }
+    .headerbutton{
+        display: grid;
+        grid-template-columns: 2fr 8fr 2fr; 
+        padding: 5px; 
+    }
+    .flipcart{
+        font-size: 30px;
+        font-style: italic;
+       text-shadow: 2px 1px 1px rgb(128, 145, 221);
+    }
+    #searchbutton{
+        padding: 5px;
+    }
+    #searchvalue{
+        width: 356px;
+    border: 2px solid black;
+    height: 31px;
+    font-size: 11px;
+    margin: -3px 0 0;
+    box-shadow: 2px 2px black;   
+    }
+    #search{
+        height: 35px;
+    width: 66px;
+    font-size: 13px;
+    border: 2px solid;
+    padding: 0px;
+    background-color: chocolate;
+    color: white;
+    box-shadow: 2px 2px white;
+    }
+    #loginondiv{
+        margin: -13px 0 0 0;
+    }
+    .login-rs button{
+        width: auto;
+        font-size: 20px;
+        margin-top: 13px;
+        background: red;
+        box-shadow: 1px 1px 1px 1px black;
+        border-radius: 5px solid black;
+    }
+   
+    #all-item{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        height: 150px;
+        background-color: rgb(233, 226, 226);
+    }
+    .paraitem{
+        
+        background-color: black;
+        text-align: center;
+    }
+    .itemname{
+        color: white; 
+       background-color: black;
+       text-decoration: none;
+    }
+    #imgresponsive{
+       height: 100px;
+       width: 100px;
+    }
+    #firstrow{
+        margin-top: 5px;
+    }
+    #carouseheigthres{
+        margin-top: 1px;
+    }
+    .caroubanner{
+        border-radius: 6px;
+    }
+    #caitem{
+        border: 2px solid black;
+    }
+    #sarouselimgres{
+        height:400px; 
+        width:100%;
+    }
+    .smallimg{
+        background-color: white;
+    }
+    #smallres{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 5px;
+    }
+    .smallimgcl{
+        height:80px; 
+        width:71px;
+    }
+    .footcolor{
+        margin-top: 5px;  
+        background-color: yellow;
+        
+        
+    }
+    .footdes{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .footer-menu{
+        border: 2px solid red; 
+        border-radius: 3px; 
+        padding: 2px;
+    }
+        @media screen and (max-width:650px){
+            .top{
+                width: 100%; 
+            height: 20px; 
+            background-color: yellow;
+            }
+            .headerbutton{
+                display: grid;
+                grid-template-columns: 2fr 8fr 2fr; 
+                padding: 2px;
+            }
+            .flipcart{
+                font-size: 20px;
+            }
+            #searchvalue{
+                width: 100px;
+                border: 1px solid black;
+                height: 9px;
+                font-size: 5px;
+                margin-top: -2px;
+                box-shadow: -1px 0px black;
+            }
+            #searchbutton{
+                padding: 2px;
+                margin-top: -11px;
+            }
+            .flipcart{
+                font-size: 8px;
+            }
+            #search{
+                height: 9px;
+                width: 28px;
+                font-size: 5px;
+                border: 1px solid;
+                padding: 0px;
+                background-color: chocolate;
+                color: white;
+                box-shadow: 1px 0px 0px -2px white
+            }
+            .login-rs button{
+                height: auto;
+                width: auto;
+                font-size: 3px;
+                margin-top: 1px;
+                border-radius: 1px solid black;
+                box-shadow: -1px 1px black;
+                border: 0px solid black;
+               
+            }
+        #loginondiv{
+            margin: -13px 0 0 0;
+        }
+       
+        #all-item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 85px;
+    background-color: rgb(233, 226, 226);
+        }
+        #firstrow{
+            margin-top: 2px;
+            height: 41px;
+        }
+        .itemname{
+            color: white;
+            background-color: black;
+            text-decoration: none;
+        }
+        
+        .paraitem{
+            background-color: black;
+            text-align: center;
+            height: 7px;
+            width: 32px;
+            font-size: 4px;
+        }
+        #imgresponsive{
+            height: 26px;
+            width: 32px;
+            margin-top: -32px;
+         }
+         .carousel-inner{
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            height: 86px;
+         }
+         #caitem{
+            border: 1px solid black;
+         }
+         #carouseheigthres{
+            margin-top: -8px;
+        }
+        .smallimg{
+            background-color: white;
+            height: 21px;
+            margin-top: -3px;
+        }
+        #smallres{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 5px;
+            background-color: white;
+        }
+        .smallimgcl{
+            height: 25px;
+    width: 26px;
+        }
+        .footcolor{
+            margin-top: 5px;
+            background-color: yellow;
+            height: 20px;
+            width: 100%;
+        }
+        .footdes{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .footer-menu{
+            border: 1px solid red;
+            border-radius: 3px;
+            padding: 2px;
+            height: 20px;
+            width: 58px;
+            font-size: 8px;
+        }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 959px)  {
+        .top{
+            width: 100%;
+            height: 37px;
+            background-color: yellow;
+        }
+        .headerbutton{
+            display: grid;
+            grid-template-columns: 2fr 8fr 2fr; 
+            padding: 2px;
+        }
+        .flipcart{
+            font-size: 30px;
+            font-style: italic;
+            text-shadow: 2px 1px 1px rgb(128, 145, 221);
+        }
+       
+        #searchvalue{
+            width: 339px;
+    border: 2px solid black;
+    height: 26px;
+    font-size: 11px;
+    margin: 0px 0 0;
+    box-shadow: 2px 2px black;
+        }
+        #searchbutton{
+            margin-top: 4px;
+        }
+       
+        #search{
+            height: 28px;
+            width: 66px;
+            font-size: 13px;
+            border: 2px solid;
+            padding: 0px;
+            background-color: chocolate;
+            color: white;
+            box-shadow: 2px 2px white;
+        }
+        .login-rs{
+        margin-top: 3px;
+        }
+        .login-rs button{
+            width: auto;
+    font-size: 18px;
+    margin-top: 13px;
+    background: red;
+    box-shadow: 1px 1px 1px 1px black;
+           
+        }
+    #loginondiv{
+        margin: -13px 0 0 0;
+    }
+   
+    #all-item{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+width: 100%;
+height: 85px;
+background-color: rgb(233, 226, 226);
+    }
+    #firstrow{
+        margin-top: 2px;
+        height: 41px;
+    }
+    .itemname{
+        color: white;
+        background-color: black;
+        text-decoration: none;
+    }
+    
+    .paraitem{
+        background-color: black;
+        text-align: center;
+        height: 7px;
+        width: 32px;
+        font-size: 4px;
+    }
+    #imgresponsive{
+        height: 26px;
+        width: 32px;
+        margin-top: -32px;
+     }
+     .carousel-inner{
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 86px;
+     }
+     #caitem{
+        border: 1px solid black;
+     }
+     #carouseheigthres{
+        margin-top: -8px;
+    }
+    .smallimg{
+        background-color: white;
+        height: 21px;
+        margin-top: -3px;
+    }
+    #smallres{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 5px;
+        background-color: white;
+    }
+    .smallimgcl{
+        height: 80px;
+        width: 74px
+    }
+    .footcolor{
+        margin-top: 5px;
+        background-color: yellow;
+        height: 20px;
+        width: 100%;
+    }
+    .footdes{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .footer-menu{
+        border: 1px solid red;
+        border-radius: 3px;
+        padding: 2px;
+        height: 20px;
+        width: 58px;
+        font-size: 8px;
+    }
+    }
+     
+    @media only screen and (min-width: 414px)  {
+        #carouseheigthres{
+            margin-top: -12px;
+        }
+    }
